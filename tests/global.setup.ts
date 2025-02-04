@@ -6,6 +6,7 @@ import { baseurl } from "../src/api/testdata/baseurl";
 import Createtoken from "../src/api/pages/Createtoken";
 import { create } from "domain";
 
+test.slow();
 
 test('Login', { tag: "@ui" }, async ({ page, launch, login }) => {
     await test.step('Login to Orange HRM', async () => {
