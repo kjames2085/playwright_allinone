@@ -1,9 +1,8 @@
 import { test as mytest } from "@playwright/test";
-import Launch from "../pages/launch";
+import Launch from "../pages/Launch";
 import Login from "../pages/Login";
 import Homepage from "../pages/Homepage";
 import Logout from "../pages/Logout";
-import { log } from "console";
 
 export const test = mytest.extend<{ launch: Launch, login: Login, homepage: Homepage, logout: Logout }>({
     launch: async ({ page },use) => {
