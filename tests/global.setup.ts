@@ -6,11 +6,11 @@ import { baseurl } from "../src/api/testdata/baseurl";
 import Createtoken from "../src/api/pages/Createtoken";
 import { create } from "domain";
 
-test('Login',async ({page,launch,login}) => {
+test('Login',{tag: "@ui"}, async ({page,launch,login}) => {
     await login.login();
 })
 
-test('Create Token', async ({ request, createtoken }) => {
+test('Create Token',{tag: "@api"}, async ({ request, createtoken }) => {
     const token = await createtoken.createtoken('/auth');
     expect(token).toMatch(/[0-9a-z]{15}/)
 
